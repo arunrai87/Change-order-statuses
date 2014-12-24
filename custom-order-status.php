@@ -16,7 +16,7 @@ add_submenu_page( 'woocommerce', 'Change Order Status', 'Change Order Status', '
 function CustomOrderStatusHtml(){
 global $woocommerce;
 $getStatuses = unserialize(get_option( 'payment_gateway_array' ));
-$statuses = (array) get_terms('shop_order_status', array('hide_empty' => 0, 'orderby' => 'id'));
+$statuses = array('pending','failed','on-hold','processing','completed','refunded','cancelled');
 ?>	
 <form name="orderform" action="" method="post">
 <tr valign="top">
