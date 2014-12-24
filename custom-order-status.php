@@ -40,7 +40,7 @@ $statuses = array('pending','failed','on-hold','processing','completed','refunde
 									<option value='-1'>Please Select A Order Status</option>
 										<?php
 										foreach($statuses as $status) { ?>
-										<option <?php echo ($status->slug == $getStatuses[$i]['order_select']) ? ' selected="selected" ' : ''; ?> value='<?php echo  $status->slug;?>'><?php echo $status->slug;?></option>
+										<option <?php echo ($status == $getStatuses[$i]['order_select']) ? ' selected="selected" ' : ''; ?> value='<?php echo  $status; ?>'><?php echo $status;?></option>
 										<?php } ?>
 								</select>
 							</td>
